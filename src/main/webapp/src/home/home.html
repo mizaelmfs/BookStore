@@ -50,7 +50,7 @@
             <div class="4u 12u(medium)" ng-repeat="book in books track by $index">
                 <!-- Box -->
                 <section class="box feature">
-                    <img ng-src="data:image/*; base64,{{book.image}}" alt="{{book.tile}}" />
+                    <a href="/#" class="image featured"><img ng-src="data:image/*; base64,{{book.image}}" alt="{{book.title}}" /></a>
                     <div class="inner">
                         <header>
                             <h2>{{book.title}}</h2>
