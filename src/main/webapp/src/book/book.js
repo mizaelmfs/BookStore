@@ -50,7 +50,7 @@ angular.module('bookStore')
         });
       };
 
-     RestSrv.find(bookUrl + ' /list?page=0&size=4&sort=id', function(data) {
+     RestSrv.find(bookUrl + '/list?page=0&size=4&sort=id', function(data) {
         $scope.books = data.content;
         $scope.pagination = data;
         for(var i = 0; i < $scope.pagination.totalPages; i++){
