@@ -1,0 +1,75 @@
+<!-- Slider -->
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="images/amores-sao-como-livros.html.jpg" class="slider" alt="menina com livro" />
+            <div class="carousel-caption">
+                <h3>Ler livros faz bem a cuca</h3>
+                <p>Compre um livro</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/lord-of-the-rings-wallpaper7.jpg" class="slider" alt="lord of the rings" />
+            <div class="carousel-caption">
+                <h3>O senhor dos aneis</h3>
+                <p>Triologia completa de senhor dos aneis</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/403408.jpg" class="slider" alt="games of thrones" />
+            <div class="carousel-caption">
+                <h3>Games of Thrones</h3>
+                <p>Toda a coletânea de GOT</p>
+            </div>
+        </div>
+         <div class="item">
+            <img src="../../images/maxresdefault.jpg" class="slider" alt="poder do xablau" />
+            <div class="carousel-caption">
+                <h3>O poder do xablau</h3>
+                <p>Sinta sua força</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Features -->
+<div id="features-wrapper">
+    <div class="container">
+       <input id="search" placeholder="Find book by title here" type="text" class="7u -3u 12u(medium)" ng-keyup="backspace($event)" ng-keypress="finByTitle()" ng-model="title"/>
+       <button id="btn-cart" ng-click="cart()" type="button" class="7u -3u 12u(medium)"><i class="fa fa-cart-plus" aria-hidden="true"></i>&nbsp Cart</button>
+        <div class="row">
+            <div class="4u 12u(medium)" ng-repeat="book in books track by $index">
+                <!-- Box -->
+                <section class="box feature">
+                    <a href="#" class="image featured"><img ng-src="data:image/*; base64,{{book.image}}" alt="" /></a>
+                    <div class="inner">
+                        <header>
+                            <h2>{{book.title}}</h2>
+                            <p><strong>Auhtor:</strong> {{book.author.name}}</p>
+                        </header>
+                        <p><strong>Description:</strong> {{book.description}}</p>
+                        <p><strong>Year:</strong> {{book.year}}</p>
+                        <p><strong>$:</strong> {{book.price | currency:'':2}}</p>
+                        <p><button type="button" ng-click="plus(book)" class="12u"><i class="fa fa-plus-square" aria-hidden="true"></i></button>
+                    </div>
+                </section>
+            </div>
+            <nav aria-label="Page navigation" class="12u 6u$(medium) 12u$(small)" id="pagination">
+                <ul class="pagination">
+                    <li ng-repeat="page in totalPages"><a ng-click="findPagination(page)" href="#/">{{page+1}}</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+
