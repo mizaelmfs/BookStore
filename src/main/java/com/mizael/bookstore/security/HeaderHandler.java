@@ -35,8 +35,8 @@ public class HeaderHandler implements LogoutSuccessHandler, Filter {
 	public void destroy() {	}
 
 	private void injectHeaders(HttpServletResponse response) {
-		//response.setHeader("Access-Control-Allow-Origin", "http://mizaelteste.pe.hu");
-		response.setHeader("Access-Control-Allow-Origin", "https://bookstores.herokuapp.com");
+		response.setHeader("Access-Control-Allow-Origin", "http://mizaelteste.pe.hu");
+		//response.setHeader("Access-Control-Allow-Origin", "https://bookstores.herokuapp.com");
 		response.setHeader("Access-Control-Allow-Credentials", "true");
 		response.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, DELETE, OPTIONS");
 		response.setHeader("Access-Control-Max-Age", "3600");
